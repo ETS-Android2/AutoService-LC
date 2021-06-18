@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleChatBot</string>
+    <string name="startGreeting">Welcome to auto service chatbot!</string>
+</resources>

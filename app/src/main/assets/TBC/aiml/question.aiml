@@ -13,8 +13,8 @@
 <template> L200 or Montero</template>
 </category>
 <category><pattern>L200</pattern>
-<template>  Our services include: #Newline A. Inspection of engine belts and hoses #Newline B. Change of Engine oil (8 quarts of 15W / 40  oil with oilf filter) #Newline C. Check the condition of the car battery #Newline D. Inspection of the brake and steering system.  #Newline Total Cost:  US$ 125.00 #Newline #Newline Please fill out the form. Thanks for choosing us.</template>
-<template>...Our services include: #Newline A. Inspection of engine belts and hoses #Newline B. Change of Engine oil (8 quarts of 15W / 40  oil with oilf filter) #Newline C. Check the condition of the car battery #Newline D. Inspection of the brake and steering system.  #Newline Total Cost:  US$ 125.00 #Newline #Newline Please fill out the form. Thanks for choosing us.</template>
+<template>  Our services include: #Newline A. Inspection of engine belts and hoses #Newline B. Change of Engine oil (8 quarts of 15W/40  oil with oilf filter) #Newline C. Check the condition of the car battery #Newline D. Inspection of the brake and steering system.  #Newline Total Cost:  US$ 125.00 #Newline #Newline Please fill out the form. Thanks for choosing us.</template>
+<template>...Our services include: #Newline A. Inspection of engine belts and hoses #Newline B. Change of Engine oil (8 quarts of 15W/40  oil with oilf filter) #Newline C. Check the condition of the car battery #Newline D. Inspection of the brake and steering system.  #Newline Total Cost:  US$ 125.00 #Newline #Newline Please fill out the form. Thanks for choosing us.</template>
 </category>
 <category><pattern>REPAIR</pattern>
 <template>Could you describe what is wrong with your car?</template>

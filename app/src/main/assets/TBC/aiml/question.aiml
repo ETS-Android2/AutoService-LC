@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category><pattern>MAINTENANCE</pattern>
+<template>Car´s brand: MITSUBISHI OR HONDA</template>
+</category>
+<category><pattern>1</pattern>
+<template>Car´s brand:  MITSUBISHI or  HONDA</template>
+</category>
+<category><pattern>MITSUBISHI</pattern>
+<template> Diesel or Gasoline</template>
+</category>
+<category><pattern>DIESEL</pattern>
+<template> L200 or Montero</template>
+</category>
+<category><pattern>L200</pattern>
+<template>  Our services include: #Newline A. Inspection of engine belts and hoses #Newline B. Change of Engine oil (8 quarts of 15W / 40  oil with oilf filter) #Newline C. Check the condition of the car battery #Newline D. Inspection of the brake and steering system.  #Newline Total Cost:  US$ 125.00 #Newline #Newline Please fill out the form. Thanks for choosing us.</template>
+<template>...Our services include: #Newline A. Inspection of engine belts and hoses #Newline B. Change of Engine oil (8 quarts of 15W / 40  oil with oilf filter) #Newline C. Check the condition of the car battery #Newline D. Inspection of the brake and steering system.  #Newline Total Cost:  US$ 125.00 #Newline #Newline Please fill out the form. Thanks for choosing us.</template>
+</category>
+<category><pattern>REPAIR</pattern>
+<template>Could you describe what is wrong with your car?</template>
+</category>
+<category><pattern>2</pattern>
+<template>Could you describe what is wrong with your car?</template>
+</category>
+<category><pattern>MESSAGE</pattern>
+<template>Write a short message and an auto mechanic will contact you asap.</template>
+</category>
+<category><pattern>3</pattern>
+<template>Write a short message and an auto mechanic will contact you asap.</template>
+</category>
+
+</aiml>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <!-- Herick -->
+    <!-- Hi there, what is your name? -->
+    
+   <category><pattern>MY NAME IS *</pattern>
+        <template>
+            <think><set name="username"><star /></set></think>
+            Hello <get name="username" />, I will remember your name.
+Please type your email address and your phone number for a better service:
+
+        </template>
+    </category>
+        
+    <category><pattern>WHAT IS MY NAME</pattern>
+        <template>You tell me that your name is <get name="username" /></template>
+    </category>
+
+    <category><pattern>MY EMAIL IS *</pattern>
+        <template>
+            <think><set name="useremail"><star /></set></think>
+            <get name="username" />, I also need your phone number:
+        </template>
+    </category>
+
+   <category><pattern>MY NUMBER IS *</pattern>
+        <template>
+            <think><set name="userpnumber"><star /></set></think>
+            Thank! How can I help you today?
+        </template>
+    </category>
+
+    <!-- Maintenancne Start -->
+    <!-- Brands Start -->
+    <!-- How can I help you? -->
+    
+    <category>
+      <pattern>I NEED A MAINTENANCE</pattern>
+      <template>Do you want a maintenance for your car?</template>
+    </category>
+    
+    <category><pattern>NO</pattern>
+        <that>DO YOU WANT A MAINTENANCE FOR YOUR CAR</that>
+        <template>What can I do for you?</template>
+    </category>
+    
+    <category><pattern>YES</pattern>
+        <that>DO YOU WANT A MAINTENANCE FOR YOUR CAR</that>
+        <template>
+            <think><set name="service">maintenance</set></think>
+            Ok, I can help you with that so...
+What is the BRAND of car you drive?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MITSUBISHI</pattern>
+        <that>WHAT IS THE BRAND OF CAR YOU DRIVE</that>
+        <template>
+            <think><set name="carbrand">Mitsubishi</set></think>
+            The interior and exterior designs of Mitsubishi Cars are made with high-quality and durable materials.
+Is you <get name="carbrand" /> Diesel or Gasoline?
+        </template>
+    </category>
+    <category>
+        <pattern>HONDA</pattern>
+        <that>WHAT IS THE BRAND OF CAR YOU DRIVE</that>
+        <template>
+            <think><set name="carbrand">Honda</set></think>
+            Honda is not only known for producing durable, lasting cars but also for its safety on the roads.
+Is you <get name="carbrand" /> Diesel or Gasoline?
+        </template>
+    </category>
+    <category>
+        <pattern>TOYOTA</pattern>
+        <that>WHAT IS THE BRAND OF CAR YOU DRIVE</that>
+        <template>
+            <think><set name="carbrand">Toyota</set></think>
+            Okay, we already know that the president of Toyota loves racing cars, and that is why we understand his other confession: autonomous cars seem boring to him.
+Is you <get name="carbrand" /> Diesel or Gasoline?
+        </template>
+    </category>
+    <category>
+        <pattern>HYUNDAI</pattern>
+        <that>WHAT IS THE BRAND OF CAR YOU DRIVE</that>
+        <template>
+            <think><set name="carbrand">Hyundai</set></think>
+            Did you know that Hyundai Motor Company is the largest South Korean car manufacturer? Its main headquarters are in Yangjae-Dong prefecture in Seocho-Gu city in Seoul.
+Is you <get name="carbrand" /> Diesel or Gasoline?
+        </template>
+    </category>
+    
+    <category><pattern>WHAT IS MY CAR BRAND</pattern>
+        <template>Your card brand is <get name="carbrand" /></template>
+    </category>
+
+    <!-- Brands End -->
+    <!-- Motor type Start -->
+    
+    <category><pattern>DIESEL</pattern>
+        <template>
+            <think><set name="carmotor">diesel</set></think>
+            Which model L200 or Outlander?
+        </template>
+    </category>
+    <category><pattern>GASOLINE</pattern>
+        <template>
+            <think><set name="carmotor">gasoline</set></think>
+            How many miles will your maintenance be?
+        </template>
+    </category>
+    
+    <category><pattern>WHAT IS MY CAR MOTOR TYPE</pattern>
+        <template>Your card motor type is <get name="carmotor" /></template>
+    </category>
+    
+    <!-- Motor type End -->
+    <!-- Diesel Model Start -->
+    
+    <category><pattern>L200</pattern>
+        <template>
+            <think><set name="dieselmodel">L200</set></think>
+            How many miles will your maintenance be?
+        </template>
+    </category>
+    <category><pattern>OUTLANDER</pattern>
+        <template>
+            <think><set name="dieselmodel">Outlander</set></think>
+            How many miles will your maintenance be?
+        </template>
+    </category>
+    
+    <!-- Diesel Model End -->
+    <!-- Miles Start -->
+    
+    <category>
+        <pattern>LIKE * MILES</pattern>
+        <that>HOW MANY MILES WILL YOUR MAINTENANCE BE</that>
+        <template>
+            <think><set name="miles"><star /></set></think>
+            <condition name="miles">
+                <li value="5000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li value="10000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li value="20000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li value="30000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li value="40000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li value="50000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li value="100000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li value="200000">The <get name="miles" /> miles maintenance for your <get name="carbrand" /> <get name="carmotor" /> includes: Change of engine oil (8 quarts of 15W / 40  oil with oilf filter)
+Check the condition of the car battery
+Inspection of the brake and steering system.
+Total Cost: US$ 125.00
+                </li>
+                <li>If you are not sure, come, and my friend, the mechanic, will help you. I'm going to tell him that we already know each other <get name="username" />.</li>
+            </condition>
+Do you want me to confirm the information? Y/N
+        </template>
+    </category>
+
+    <category><pattern>YES *</pattern>
+        <template>Ok thanks for trust in Us, an email will be send now...</template>
+    </category>
+
+    <category><pattern>NO *</pattern>
+        <template>Ok then you need to visit the auto service for more help.</template>
+    </category>
+
+    <!-- Miles End -->
+    <!-- Maintenancne End -->
+    <!-- Repair Start -->
+
+    <category><pattern>N</pattern>
+        <that>DO YOU WANT ME TO CONFIRM THE INFORMATION</that>
+        <template>Ok, do you want to change something?</template>
+    </category>
+
+    <category>
+        <pattern>I NEED A REPAIR</pattern>
+        <template>
+            <think><set name="service">repair</set></think>
+            Could you describe what is wrong with your car?
+        </template>
+    </category>
+    
+    <category><pattern>*</pattern>
+        <that>COULD YOU DESCRIBE WHAT IS WRONG WITH YOUR CAR</that>
+        <template>
+            <think><set name="repair"><star /></set></think>
+            Do you want me to confirm the information?
+        </template>
+    </category>
+--------------------------------mail start----------------------------------------------------
+    <category><pattern>yes ok</pattern>
+        <template>
+            <condition name="service">
+                <li value="maintenance"><get name="username" />, these are my notes -><br />You need a <get name="service" /> for your <get name="carbrand" />, <get name="carmotor" /> with <get name="miles" /></li>
+                <li value="repair"><get name="username" />, these are my notes -><br />You need a <get name="service" />, you commented the following:<br /><get name="repair" /></li>
+                <li>Sorry I was not paying attention. Better contact a human agent at +507 6945-0001.</li>
+            </condition>
+            <br />Do you want me to send this information?
+        </template>
+    </category>
+
+     <category>
+        <pattern>YES</pattern>
+        <that>* DO YOU WANT ME TO SEND THIS INFORMATION</that>
+        <template>
+            <!-- <get name="username" />, I am mailing your car needs <get name="carbrand" /> to the auto service workshop, with your contact details <get name="userpnumber" /> and <get name="useremail" />. -->
+            <oob>
+                <email>
+                    <to>bot@tallerluiscedeno.com</to>
+                    <subject>Service request <get name="service"/></subject>
+                    <body>
+                        Dear Sir, following is a request from <get name="username" /> requesting a <get name="service"/> for a <get name="carbrand" />.  You can make a contact at the phone: <get name="userpnumber" /> and email: <get name="useremail" />  Sincerely, Joe Repair.
+                    </body>
+                </email>
+            </oob>
+        </template>
+    </category>
+---------------------------------mail end-------------------------------------------------------
+    <category><pattern>Y</pattern>
+        <template>
+            <condition name="service">
+                <li value="maintenance"><get name="username" />, these are my notes:
+You need a <get name="service" /> for your <get name="carbrand" />, <get name="carmotor" /> with <get name="miles" /> miles.
+Now, I Send this to the auto servise By E-mail...</li>
+
+                <li value="repair"><get name="username" />, these are my notes:
+You need a <get name="service" />, then you tell me this:
+                <get name="repair" /></li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>OK</pattern>
+        <template>
+            <get name="username" />, I am mailing your car needs <get name="carbrand" /> to the auto service workshop, with your contact details <get name="userpnumber" />
+
+"You will receive an email from bot@tallerlluiscedeno.com shortly with our coordinates to schedule an appointment".
+        </template>
+    </category>
+
+     <category>
+        <pattern>NO THANKS</pattern>
+        <template>
+            <get name="username" />, I will keep your secret.
+        </template>
+    </category>
+
+    <category><pattern>NO</pattern>
+            <template>
+                <condition name="service">
+                    <li>Sorry I was not paying attention. Better contact a human agent.</li>
+                </condition>
+            </template>
+        </category>
+    
+    <!-- Repair Start -->
+
+</aiml>

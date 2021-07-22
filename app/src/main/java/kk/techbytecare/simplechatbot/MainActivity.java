@@ -57,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ChatMessageAdapter(this, new ArrayList<ChatMessage>());
         listView.setAdapter(adapter);
-
+/*
+* This button is in charge of sending messages to the chatbot
+* and that the chatbot responds with a message
+*/
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
 
         boolean makeFile = fileName.mkdirs();
 
+/*
+* In the section below you will find what makes the app find where the bot's brain
+* is stored, which is located on the sd card in a folder called TBC \ bots \ TBC \ ...
+* Within these folders is every possible question and answer to user interaction.
+*/
+
         if (fileName.exists()) {
             //Reading the file
             try {
@@ -100,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
                         in = assets.open("TBC/" + dir + "/" + file);
                         out = new FileOutputStream(fileName.getPath() + "/" + dir + "/" + file);
 
-                        //copy file from assets to the mobile's SD card or any secondary memory
+                        /*
+                        copy file from assets to the mobile's SD card or any secondary memory
+                         */
                         copyFile(in, out);
                         in.close();
                         out.flush();
@@ -112,14 +123,31 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        //get the working directory
+        /*
+        get the working directory
+        from here you get what you need for the chatbot, and show it on the screen
+         */
         MagicStrings.root_path = Environment.getExternalStorageDirectory().toString() + "/TBC";
         AIMLProcessor.extension =  new PCAIMLProcessorExtension();
 
         bot = new Bot("TBC", MagicStrings.root_path, "chat");
         chat = new Chat(bot);
-    }
 
+        /*
+         Welcome message
+         Here is the code that shows the first message when the application is opened and asks us
+         for the name
+         */
+        String message = "Hi, Welcome to the Taller cedeno Auto Service \nwhat is your name?";
+
+        botsReply(message);
+        listView.setSelection(adapter.getCount() - 1);
+
+    }
+    /*
+    here we find the code that is responsible for choosing the side on which
+    the messages go, the bot goes to the left and the user goes to the right
+     */
     private void sendMessage(String message) {
         ChatMessage chatMessage = new ChatMessage(message, true, false);
         adapter.add(chatMessage);
@@ -130,9 +158,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.add(chatMessage);
     }
 
-
     public static boolean isSDCARDAvailable(){
-        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)? true :false;
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     //copying the file
@@ -143,4 +170,5 @@ public class MainActivity extends AppCompatActivity {
             out.write(buffer, 0, read);
         }
     }
+
 }
